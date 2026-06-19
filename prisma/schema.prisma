@@ -1,0 +1,101 @@
+// ShipOrShame — Prisma schema
+// PostgreSQL + Prisma. Access tokens are stored encrypted at rest (AES-256-GCM).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ProjectStatus {
+  IDEA
+  IN_PROGRESS
+  SHIPPED
+  ARCHIVED
+  ABANDONED
+}
+
+enum NotificationType {
+  NUDGE
+  MILESTONE
+  SHAME_SPIKE
+}
+
+model User {
+  id          String   @id @default(cuid())
+  githubId    BigInt   @unique
+  username    String   @unique
+  name        String?
+  avatarUrl   String?
+  email       String?
+  // GitHub OAuth access token, encrypted at rest (AES-256-GCM, see lib/server/crypto.ts)
+  accessToken String?
+  isPublic    Boolean  @default(true)
+  lastSyncAt  DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  projects      Project[]
+  notifications Notification[]
+  sessions      Session[]
+
+  @@index([username])
+}
+
+model Project {
+  id            String        @id @default(cuid())
+  userId        String
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // null if idea-only (no repo yet)
+  githubRepoId  BigInt?
+  title         String
+  description   String?
+  ideaStartedAt DateTime
+  repoCreatedAt DateTime?
+  lastCommitAt  DateTime?
+  status        ProjectStatus @default(IDEA)
+  isPublic      Boolean       @default(true)
+  techStack     String[]      @default([])
+  liveUrl       String?
+  notes         String?
+  shameScore    Int           @default(0)
+
+  // Tracks which fields the user has manually edited so sync doesn't clobber them.
+  statusEditedByUser  Boolean @default(false)
+  liveUrlEditedByUser Boolean @default(false)
+  ideaStartedByUser   Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  notifications Notification[]
+
+  @@unique([userId, githubRepoId])
+  @@index([userId])
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  projectId String?
+  project   Project?         @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  type      NotificationType
+  sentAt    DateTime         @default(now())
+  message   String
+
+  @@index([userId])
+  @@index([projectId, type, sentAt])
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+
+  @@index([userId])
+}

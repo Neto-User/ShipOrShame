@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(corepack --version)",
+      "Bash(corepack enable *)",
+      "Bash(corepack prepare *)",
+      "Bash(pnpm --version)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm exec *)",
+      "Bash(pnpm rebuild *)",
+      "Bash(./node_modules/.bin/prisma generate *)",
+      "Bash(node ./node_modules/@sveltejs/kit/src/exports/vite/sync.js)",
+      "Bash(./node_modules/.bin/svelte-kit sync *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(./node_modules/.bin/svelte-check --tsconfig ./tsconfig.json --output human)",
+      "Bash(pnpm add *)",
+      "Bash(./node_modules/.bin/vite build *)",
+      "Bash(./node_modules/.bin/prisma migrate *)"
+    ]
+  }
+}
