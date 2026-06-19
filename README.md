@@ -26,7 +26,9 @@ ShipOrShame connects to your GitHub and publicly displays exactly how long you'v
 
 [Features](#features) · [Self-Hosting](#self-hosting) · [GitHub OAuth Setup](#github-oauth-setup) · [Contributing](#contributing)
 
-> 📸 add screenshot here — drop a dashboard screenshot into `static/` and link it.
+<p align="center">
+  <img src="static/shipOrShameview.png" alt="Dashboard" width="700">
+</p>
 
 ### Features
 
@@ -212,7 +214,9 @@ O ShipOrShame conecta na sua conta do GitHub e mostra publicamente, sem dó, há
 
 [Funcionalidades](#funcionalidades) · [Hospedando você mesmo](#hospedando-você-mesmo) · [Configurando o GitHub OAuth](#configurando-o-github-oauth) · [Contribuindo](#contribuindo)
 
-> 📸 adicione um print aqui — coloque um print do dashboard em `static/` e linke.
+<p align="center">
+  <img src="static/shipOrShameview.png" alt="Dashboard" width="700">
+</p>
 
 ### Funcionalidades
 
