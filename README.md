@@ -206,7 +206,13 @@ MIT — built with love and shame by developers who also have too many unfinishe
 <details>
 <summary><b>🇧🇷 Leia em Português (clique para alternar)</b></summary>
 
-<br>
+<div align="center">
+
+# 🚢 ShipOrShame 🔥 
+
+**Pare de mentir para si mesmo sobre os seus projetos paralelos.**
+
+</div>
 
 O ShipOrShame conecta na sua conta do GitHub e mostra publicamente, sem dó, há quanto tempo você está "quase terminando" aquele app. Ele dá a cada projeto uma nota de vergonha (shame score) e um rótulo de zoeira, e te cutuca pra você terminar ou arquivar de propósito.
 
