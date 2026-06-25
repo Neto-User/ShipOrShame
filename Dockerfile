@@ -8,8 +8,7 @@ RUN apt-get update -y && apt-get install -y openssl ca-certificates && rm -rf /v
 RUN corepack enable
 COPY package.json pnpm-lock.yaml* .npmrc* svelte.config.* ./
 COPY prisma ./prisma
-RUN pnpm install --frozen-lockfile || pnpm install
-
+RUN pnpm install --frozen-lockfile --config.enable-pre-post-scripts=true || pnpm install --config.enable-pre-post-scripts=true
 COPY . .
 RUN pnpm exec prisma generate
 RUN pnpm run build
