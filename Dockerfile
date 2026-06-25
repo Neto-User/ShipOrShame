@@ -6,8 +6,7 @@ WORKDIR /app
 RUN apt-get update -y && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
 
 RUN corepack enable
-
-COPY package.json pnpm-lock.yaml* .npmrc* ./
+COPY package.json pnpm-lock.yaml* .npmrc* svelte.config.* ./
 COPY prisma ./prisma
 RUN pnpm install --frozen-lockfile || pnpm install
 
