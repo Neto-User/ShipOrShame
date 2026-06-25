@@ -29,4 +29,4 @@ COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/package.json ./package.json
 
 EXPOSE 3000
-CMD ["sh", "-c", "node node_modules/prisma/build/index.js migrate deploy && node build"]
+CMD ["sh", "-c", "./node_modules/.bin/prisma migrate deploy && node build"]
