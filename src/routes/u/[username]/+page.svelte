@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
+	import { i18n } from '$lib/i18n.svelte';
 	import { roastTier } from '$lib/shame';
 
 	let { data }: { data: PageData } = $props();
@@ -29,7 +30,7 @@
 	<div class="card mx-auto max-w-xl p-10 text-center">
 		<p class="font-display text-lg">🙈</p>
 		<p class="mt-2 font-display text-text-primary">
-			This developer is too ashamed to show their projects.
+			{i18n.t?.profile?.privateMessage ?? 'This developer is too ashamed to show their projects.'}
 		</p>
 	</div>
 {:else}
@@ -51,7 +52,7 @@
 
 			<div>
 				<div class="font-display text-xs uppercase tracking-widest text-text-muted">
-					Overall shame score
+					{i18n.t?.profile?.overall ?? 'Overall shame score'}
 				</div>
 				<div class="font-display text-6xl font-bold" style="color: {tier.color}">
 					{data.averageShame}
@@ -60,14 +61,14 @@
 			</div>
 
 			<button class="btn-ghost" onclick={share}>
-				{copied ? '✓ Copied!' : '🔗 Share profile'}
+				{copied ? (i18n.t?.profile?.copied ?? '✓ Copied!') : `🔗 ${i18n.t?.profile?.share ?? 'Share profile'}`}
 			</button>
 		</div>
 
 		<!-- Projects -->
 		{#if data.projects.length === 0}
 			<div class="card mt-6 p-10 text-center text-text-muted">
-				No public projects yet. Suspiciously clean.
+				{i18n.t?.profile?.empty ?? 'No public projects yet. Suspiciously clean.'}
 			</div>
 		{:else}
 			<div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

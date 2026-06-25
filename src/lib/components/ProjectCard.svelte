@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import type { ProjectDTO } from '$lib/types';
+	import { i18n } from '$lib/i18n.svelte';
+	import { locale } from '$lib/stores/locale.svelte';
 	import { timeAgo } from '$lib/shame';
 	import StatusBadge from './StatusBadge.svelte';
 	import ShameBar from './ShameBar.svelte';
@@ -59,9 +61,9 @@
 		<div class="flex items-center justify-between text-xs text-text-muted">
 			<span>
 				{#if project.hasRepo}
-					Last activity {timeAgo(lastActivity)}
+					{i18n.t?.project?.lastActivity ?? 'Last activity'} {timeAgo(lastActivity, locale.current)}
 				{:else}
-					Idea born {timeAgo(project.ideaStartedAt)}
+					{i18n.t?.project?.ideaBorn ?? 'Idea born'} {timeAgo(project.ideaStartedAt, locale.current)}
 				{/if}
 			</span>
 			{#if project.liveUrl}
@@ -70,7 +72,8 @@
 					target="_blank"
 					rel="noreferrer noopener"
 					class="text-shame-green hover:underline"
-					onclick={(e) => e.stopPropagation()}>live ↗</a
+					onclick={(e) => e.stopPropagation()}
+					>{i18n.t?.project?.live ?? 'live'} ↗</a
 				>
 			{/if}
 		</div>

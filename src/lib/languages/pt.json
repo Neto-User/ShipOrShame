@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "dashboard": "Painel",
+    "logout": "Sair",
+    "connectGithub": "Conectar GitHub",
+    "builtWith": "Construído com amor e vergonha.",
+    "openSource": "Código aberto · MIT"
+  },
+  "home": {
+    "tagline": "git commit -m \"wip\" · 47 vezes · sem follow-up",
+    "titlePart1": "Pare de mentir para si mesmo sobre seus",
+    "titlePart2": "projetos paralelos.",
+    "description": "ShipOrShame conecta-se ao seu GitHub e mostra publicamente há quanto tempo você está \"quase pronto\" com esse app.",
+    "cta": "Conectar GitHub → Ver sua vergonha",
+    "statsLabel": "92% dos desenvolvedores abandonam projetos paralelos no primeiro mês.",
+    "statsHighlight": "Você é um dos 8%?",
+    "sectionTitle": "Pontuações reais. Rótulos brutais.",
+    "examples": {
+      "oneTitle": "gerador-de-receitas-ia",
+      "oneDescription": "Ia ia disruptar a cozinha. Tem um README e nada mais.",
+      "twoTitle": "rastreador-de-side-hustle",
+      "twoDescription": "\"Quase pronto.\" Está quase pronto há 7 meses.",
+      "threeTitle": "portfolio-v9",
+      "threeDescription": "Você realmente entregou este. Uma lenda anda entre nós."
+    }
+  },
+  "dashboard": {
+    "viewProfile": "Ver perfil público →",
+    "avgShame": "Shame médio",
+    "all": "Todos",
+    "sort": "Ordenar",
+    "sortOptions": {
+      "shame": "Pontuação de shame",
+      "date": "Data da ideia",
+      "activity": "Última atividade"
+    },
+    "addIdea": "+ Adicionar ideia",
+    "title": "Título",
+    "ideaStarted": "Ideia iniciada",
+    "description": "Descrição",
+    "saveIdea": "Salvar ideia",
+    "emptyTitle": "Ainda não há projetos aqui.",
+    "emptyBody": "Sincronize com o GitHub ou adicione uma ideia para começar a acumular vergonha.",
+    "statuses": {
+      "IDEA": "Ideia",
+      "IN_PROGRESS": "Em andamento",
+      "SHIPPED": "Enviado",
+      "ARCHIVED": "Arquivado",
+      "ABANDONED": "Abandonado"
+    },
+    "labels": {
+      "liveUrl": "URL ao vivo",
+      "notes": "Notas",
+      "save": "Salvar",
+      "fullEditor": "Editor completo →"
+    },
+    "placeholders": {
+      "title": "a-próxima-grande-coisa",
+      "description": "o que é isso, na verdade?",
+      "liveUrl": "https://...",
+      "notes": "desculpas, planos, arrependimentos..."
+    }
+  },
+  "sync": {
+    "syncWithGithub": "Sincronizar com GitHub",
+    "syncing": "Sincronizando…",
+    "synced": "Sincronizado {count} repositórios.",
+    "slowDown": "Calma — tente novamente em alguns minutos.",
+    "syncFailed": "Falha na sincronização. Tente novamente.",
+    "networkError": "Erro de rede durante a sincronização.",
+    "lastSynced": "Última sincronização {time}",
+    "neverSynced": "Nunca sincronizado"
+  },
+  "profile": {
+    "privateMessage": "Este desenvolvedor está envergonhado demais para mostrar seus projetos.",
+    "overall": "Pontuação geral de shame",
+    "share": "Compartilhar perfil",
+    "copied": "✓ Copiado!",
+    "empty": "Ainda não há projetos públicos. Suspeitosamente limpos."
+  },
+  "project": {
+    "lastActivity": "Última atividade",
+    "ideaBorn": "Ideia nascida",
+    "live": "ao vivo",
+    "backToDashboard": "← Voltar ao painel",
+    "repoCreated": "Repositório criado",
+    "lastActivityShort": "última atividade",
+    "ideaOnly": "Somente ideia · criada",
+    "saved": "Salvo. O shame foi recalculado.",
+    "showPublic": "Mostrar este projeto no meu perfil público",
+    "saveChanges": "Salvar alterações",
+    "saving": "Salvando…",
+    "title": "Título",
+    "description": "Descrição",
+    "status": "Status",
+    "liveUrl": "URL ao vivo",
+    "notes": "Notas"
+  },
+  "common": {
+    "toggleLanguage": "Alternar idioma"
+  }
+}

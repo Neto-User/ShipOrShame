@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ProjectStatus } from '@prisma/client';
+	import { i18n } from '$lib/i18n.svelte';
 	import { STATUS_LABELS } from '$lib/types';
 
 	let { status }: { status: ProjectStatus } = $props();
@@ -18,5 +19,5 @@
 		status
 	]}"
 >
-	{STATUS_LABELS[status]}
+	{(i18n.t?.dashboard?.statuses?.[status] ?? STATUS_LABELS[status])}
 </span>
