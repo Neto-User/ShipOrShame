@@ -5,7 +5,7 @@ RUN apt-get update -y && apt-get install -y openssl ca-certificates && rm -rf /v
 RUN corepack enable
 RUN corepack prepare pnpm@11.9.0 --activate
 
-COPY package.json pnpm-lock.yaml .npmrc* svelte.config.* ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc* svelte.config.* ./
 COPY prisma ./prisma
 
 RUN pnpm approve-builds prisma @prisma/client @prisma/engines esbuild || true
