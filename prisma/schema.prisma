@@ -1,4 +1,4 @@
-// ShipOrShame — Prisma schema
+// Nokoru — Prisma schema
 // PostgreSQL + Prisma. Access tokens are stored encrypted at rest (AES-256-GCM).
 
 generator client {

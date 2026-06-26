@@ -28,17 +28,17 @@ function nudgeCopy(type: NotificationType, project: Project): NudgeCopy {
 	switch (type) {
 		case 'NUDGE':
 			return {
-				subject: `[ShipOrShame] ${name} is calling you a coward`,
+				subject: `[Nokoru] ${name} is calling you a coward`,
 				body: `Remember ${name}? It hasn't seen a commit in two weeks and it's starting to take it personally. Two minutes of love or a guilt-free archive — your call: ${link}`
 			};
 		case 'MILESTONE':
 			return {
-				subject: `[ShipOrShame] ${name} is *still* just an idea`,
+				subject: `[Nokoru] ${name} is *still* just an idea`,
 				body: `It's been a month and ${name} is still pure vapor. Ideas are cheap; a single repo is free. Make it real or let it rest: ${link}`
 			};
 		case 'SHAME_SPIKE':
 			return {
-				subject: `[ShipOrShame] ${name} hit critical shame levels 💀`,
+				subject: `[Nokoru] ${name} hit critical shame levels 💀`,
 				body: `${name}'s shame score just crossed 80. That's "digital graveyard" territory. Resurrect it or bury it with dignity: ${link}`
 			};
 	}
@@ -81,7 +81,7 @@ export async function sendNudge(
 	try {
 		if (resend) {
 			await resend.emails.send({
-				from: env.RESEND_FROM_EMAIL ?? 'ShipOrShame <onboarding@resend.dev>',
+				from: env.RESEND_FROM_EMAIL ?? 'Nokoru <onboarding@resend.dev>',
 				to: user.email,
 				subject,
 				text: body

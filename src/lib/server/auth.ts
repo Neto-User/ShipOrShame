@@ -6,7 +6,7 @@ import { env } from '$env/dynamic/private';
 import { env as publicEnv } from '$env/dynamic/public';
 import { db } from './db';
 
-export const SESSION_COOKIE = 'shiporshame_session';
+export const SESSION_COOKIE = 'nokoru_session';
 export const OAUTH_STATE_COOKIE = 'github_oauth_state';
 const SESSION_TTL_MS = 1000 * 60 * 60 * 24 * 30; // 30 days
 const SESSION_RENEW_MS = 1000 * 60 * 60 * 24 * 15; // renew when < 15 days left

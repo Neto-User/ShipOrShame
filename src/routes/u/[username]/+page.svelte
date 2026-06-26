@@ -22,8 +22,8 @@
 </script>
 
 <svelte:head>
-	<title>@{data.username}'s shame · ShipOrShame</title>
-	<meta name="description" content="See @{data.username}'s side-project shame scores on ShipOrShame." />
+	<title>@{data.username} · Nokoru</title>
+	<meta name="description" content="See @{data.username}'s project history and scores on Nokoru." />
 </svelte:head>
 
 {#if !data.isPublic}

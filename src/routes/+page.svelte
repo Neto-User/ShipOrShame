@@ -57,10 +57,10 @@
 </script>
 
 <svelte:head>
-	<title>ShipOrShame — Stop lying to yourself about your side projects</title>
+	<title>Nokoru</title>
 	<meta
 		name="description"
-		content="ShipOrShame connects to your GitHub and publicly displays exactly how long you've been 'almost done' with that app."
+		content="Nokoru connects to your GitHub and shows the world exactly what you started, what you shipped, and what got left behind."
 	/>
 </svelte:head>
 
@@ -69,15 +69,14 @@
 		{i18n.t?.home?.tagline ?? 'git commit -m "wip" · 47 times · no follow-up'}
 	</span>
 	<h1 class="max-w-3xl font-display text-4xl font-bold leading-tight sm:text-6xl">
-		{i18n.t?.home?.titlePart1 ?? 'Stop lying to yourself about your'}
-		<span class="text-shame-red">{i18n.t?.home?.titlePart2 ?? 'side projects.'}</span>
+		{i18n.t?.home?.title ?? 'Every project you never shipped is still waiting.'}
 	</h1>
 	<p class="mt-5 max-w-xl text-lg text-text-muted">
 		{i18n.t?.home?.description ??
-			'ShipOrShame connects to your GitHub and publicly displays exactly how long you\'ve been "almost done" with that app.'}
+			'Nokoru connects to your GitHub and shows the world exactly what you started, what you shipped, and what got left behind.'}
 	</p>
 	<a href="/login/github" class="btn-primary mt-8 px-6 py-3 text-base">
-		{i18n.t?.home?.cta ?? 'Connect GitHub → See Your Shame'}
+		{i18n.t?.home?.cta ?? 'Connect GitHub → See What Remains'}
 	</a>
 	<p class="mt-4 font-display text-sm text-text-muted">
 		{i18n.t?.home?.statsLabel ?? '92% of developers abandon side projects within the first month.'}

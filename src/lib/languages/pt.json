@@ -7,11 +7,10 @@
     "openSource": "Código aberto · MIT"
   },
   "home": {
-    "tagline": "git commit -m \"wip\" · 47 vezes · sem follow-up",
-    "titlePart1": "Pare de mentir para si mesmo sobre seus",
-    "titlePart2": "projetos paralelos.",
-    "description": "ShipOrShame conecta-se ao seu GitHub e mostra publicamente há quanto tempo você está \"quase pronto\" com esse app.",
-    "cta": "Conectar GitHub → Ver sua vergonha",
+    "tagline": "Nokoru",
+    "title": "Todo projeto que você não terminou ainda tá lá esperando.",
+    "description": "Nokoru conecta no seu GitHub e mostra pro mundo exatamente o que você começou, o que você shipou e o que ficou pra trás.",
+    "cta": "Conectar GitHub → Ver o que resta",
     "statsLabel": "92% dos desenvolvedores abandonam projetos paralelos no primeiro mês.",
     "statsHighlight": "Você é um dos 8%?",
     "sectionTitle": "Pontuações reais. Rótulos brutais.",

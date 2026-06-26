@@ -43,7 +43,7 @@
 	});
 </script>
 
-<svelte:head><title>Dashboard · ShipOrShame</title></svelte:head>
+<svelte:head><title>Dashboard · Nokoru</title></svelte:head>
 
 <!-- Header -->
 <div class="card mb-6 flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">

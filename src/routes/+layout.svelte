@@ -13,8 +13,8 @@
 	<header class="border-b border-border">
 		<nav class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3">
 			<a href="/" class="font-display text-lg font-bold tracking-tight">
-				<span class="text-shame-green">Ship</span><span class="text-text-muted">Or</span><span
-					class="text-shame-red">Shame</span
+				<span class="text-shame-green">No</span><span class="text-text-muted">ko</span><span
+					class="text-shame-red">ru</span
 				>
 			</a>
 

@@ -14,7 +14,7 @@
 	let saving = $state(false);
 </script>
 
-<svelte:head><title>Edit {p.title} · ShipOrShame</title></svelte:head>
+<svelte:head><title>Edit {p.title} · Nokoru</title></svelte:head>
 
 <div class="mx-auto max-w-2xl">
 	<a href="/dashboard" class="text-sm text-text-muted hover:text-text-primary">
